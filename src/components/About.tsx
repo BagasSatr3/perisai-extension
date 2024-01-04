@@ -2,10 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Nav from "./Nav";
 
-// interface Todo {
-//   title: string;
-// }
-
 function About() {
   const [data, setData] = useState<any>(null);
 

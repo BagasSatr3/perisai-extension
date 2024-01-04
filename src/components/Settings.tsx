@@ -1,61 +1,64 @@
 import Footer from "./Footer";
-import { CiStickyNote } from "react-icons/ci";
-import { FaCreditCard } from "react-icons/fa";
-import { LiaSignInAltSolid } from "react-icons/lia";
-import NavItems from "./NavItems";
+import NavSettings from "./NavSettings";
 
-function Items() {
+function Settings() {
   return (
     <div className="flex flex-col min-h-screen text-white">
-      <NavItems />
+      <NavSettings />
       <div className="m-2 gap-3">
-        <p className="text-sm m-1">Types</p>
+        <p className="text-sm m-1">Manage</p>
         <div className="shadow-xl types rounded cursor-pointer hover:bg-gray-500 mb-2">
           <div className="p-2 flex items-center gap-2">
-            <FaCreditCard size={24} />
-            <p className="text-sm">Card</p>
-            <p className="grow text-right text-sm">0</p>
+            <p className="text-sm grow">Auto Fill</p>
             <p className="text-right text-sm">{">"}</p>
           </div>
         </div>
         <div className="shadow-xl types rounded cursor-pointer hover:bg-gray-500 mb-2">
           <div className="p-2 flex items-center gap-2">
-            <CiStickyNote size={24} />
-            <p className="text-sm">Notes</p>
-            <p className="grow text-right text-sm">0</p>
+            <p className="text-sm grow">Sync</p>
             <p className="text-right text-sm">{">"}</p>
           </div>
         </div>
         <div className="shadow-xl types rounded cursor-pointer hover:bg-gray-500 mb-2">
           <div className="p-2 flex items-center gap-2">
-            <LiaSignInAltSolid size={24} />
-            <p className="text-sm">Login</p>
-            <p className="grow text-right text-sm">0</p>
+            <p className="text-sm grow">Excluded domains</p>
+            <p className="text-right text-sm">{">"}</p>
+          </div>
+        </div>
+      </div>
+      <div className="m-2 gap-3">
+        <p className="text-sm m-1">Security</p>
+        <div className="shadow-xl types rounded cursor-pointer hover:bg-gray-500 mb-2">
+          <div className="p-2 flex items-center gap-2">
+            <p className="text-sm grow">Unlock with PIN</p>
+            <p className="text-right text-sm">{">"}</p>
+          </div>
+        </div>
+        <div className="shadow-xl types rounded cursor-pointer hover:bg-gray-500 mb-2">
+          <div className="p-2 flex items-center gap-2">
+            <p className="text-sm grow">Lock now</p>
+            <p className="text-right text-sm">{">"}</p>
+          </div>
+        </div>
+        <div className="shadow-xl types rounded cursor-pointer hover:bg-gray-500 mb-2">
+          <div className="p-2 flex items-center gap-2">
+            <p className="text-sm grow">Two step login</p>
             <p className="text-right text-sm">{">"}</p>
           </div>
         </div>
       </div>
       <div className="m-2 gap-3 flex-grow">
-        <p className="text-sm m-1">Recent Items</p>
+        <p className="text-sm m-1">Account</p>
         <div className="shadow-xl types rounded cursor-pointer hover:bg-gray-500 mb-2">
           <div className="p-2 flex items-center gap-2">
-            <CiStickyNote size={24} />
-            <p className=" text-sm">This day will be the best!</p>
-            <p className="grow text-right text-sm">{">"}</p>
+            <p className="text-sm grow">Change master password</p>
+            <p className="text-right text-sm">{">"}</p>
           </div>
         </div>
         <div className="shadow-xl types rounded cursor-pointer hover:bg-gray-500 mb-2">
           <div className="p-2 flex items-center gap-2">
-            <CiStickyNote size={24} />
-            <p className="text-sm">It's not...</p>
-            <p className="grow text-right text-sm">{">"}</p>
-          </div>
-        </div>
-        <div className="shadow-xl types rounded cursor-pointer hover:bg-gray-500 mb-2">
-          <div className="p-2 flex items-center gap-2">
-            <FaCreditCard size={24} />
-            <p className="text-sm">MasterCard</p>
-            <p className="grow text-right text-sm">{">"}</p>
+            <p className="text-sm grow">Log out</p>
+            <p className="text-right text-sm">{">"}</p>
           </div>
         </div>
       </div>
@@ -66,4 +69,4 @@ function Items() {
   );
 }
 
-export default Items;
+export default Settings;

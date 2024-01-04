@@ -29,7 +29,7 @@ const Footer = () => {
         </button>
         <button
           className="hover:text-gray-500 focus:outline-none"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/settings")}
         >
           <IoSettingsOutline size={24} />
         </button>
