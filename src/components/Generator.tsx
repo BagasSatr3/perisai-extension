@@ -4,7 +4,7 @@ import NavGenerator from "./NavGenerator";
 import { MdContentCopy } from "react-icons/md";
 import { SlRefresh } from "react-icons/sl";
 
-const generateRandomPassword = (length) => {
+const generateRandomPassword = (length: any) => {
   const charset =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-+=";
   let password = "";
@@ -59,7 +59,7 @@ function Generator() {
   const [selectedOption, setSelectedOption] = useState("password");
   const [showAlert, setShowAlert] = useState(false);
 
-  const handleOptionChange = (event) => {
+  const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedOption(event.target.value);
 
     // Generate text immediately when radio button changes
@@ -70,7 +70,7 @@ function Generator() {
     }
   };
 
-  const FloatingAlert = ({ message }) => (
+  const FloatingAlert = ({ message }: { message: string }) => (
     <div className="fixed top-0 right-0 m-2 p-2 bg-gray-500 text-white rounded">
       {message}
     </div>
@@ -101,8 +101,10 @@ function Generator() {
           <p className="text-lg flex-grow">{generatedText}</p>
           <SlRefresh
             size={24}
-            onClick={(event) =>
-              handleOptionChange({ target: { value: selectedOption } })
+            onClick={() =>
+              handleOptionChange({
+                target: { value: selectedOption },
+              } as React.ChangeEvent<HTMLInputElement>)
             }
             className="cursor-pointer"
           />
